@@ -1,0 +1,8 @@
+{
+  "name": "kitchenheroapp",
+  "app_id": "32eeec61",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
