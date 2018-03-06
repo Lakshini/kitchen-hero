@@ -1,11 +1,6 @@
-<?php
-echo"gvyt"
-
-
-?>
 <ion-header style="background: orange">
   <ion-navbar style="background: orange">
-    <ion-title>Sign In</ion-title>
+    <ion-title>Sign In to kitchenhero</ion-title>
     <button ion-button color="dark" style="margin-left: 250px;font-weight: bold" clear>Next</button>
     
   </ion-navbar>
