@@ -1,67 +1,63 @@
-
-
-
-<ion-content padding style=" background:url('../../assets/imgs/5.jpg') no-repeat center center fixed;background-size: cover">
-    <ion-item style="background: transparent" >
-        <h1 style="text-align: center;font-weight: bolder;font-size: 25px;color: rgb(82, 19, 19)">..Add Items..</h1>
-      </ion-item>
-
-      <ion-grid>
-          <ion-row>
-            <ion-col col-12>
-              <ion-label style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold">Item Name-: </ion-label>
-              <ion-select style="font-size: 20px; color: rgb(44, 15, 15);font-weight: bold" >
-                
-
-                <ion-option > Apple</ion-option>
-                <ion-option>Banana</ion-option>
-                <ion-option>Bread</ion-option>
-                <ion-option>Butter</ion-option>
-                <ion-option>Cake</ion-option>
-                <ion-option>Cheese</ion-option>
-                <ion-option>Curry</ion-option>
-                
-                <ion-option>Coconut</ion-option>
-                <ion-option>Drinks</ion-option>
-                <ion-option>Ice Cream</ion-option>
-                <ion-option>Lemon</ion-option>
-                <ion-option>Milk</ion-option>
-                <ion-option>Orange</ion-option>
-                <ion-option>Rice</ion-option>
-                <ion-option>Shorteats</ion-option>
-                <ion-option>Tomatoes</ion-option>
-                <ion-option>Watermelon</ion-option>
-                <ion-option>Yought</ion-option>
-              </ion-select>
-            </ion-col>
-            
-          </ion-row>
-         
-        </ion-grid>
-
-        <ion-item style="background-color: transparent">
-            <ion-label floating style="font-weight: bolder;font-size: 20px;margin-top: 30px;color:rgb(44, 15, 15)" >No Of Items-:</ion-label>
-            
-            <ion-input type="text" style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold"></ion-input>
-          </ion-item>
-
-          <ion-item style="background: transparent">
-              <ion-label floating style="font-weight: bolder;font-size: 20px;margin-top: 30px;color:rgb(44, 15, 15)" >Expire Date</ion-label>
-              <ion-datetime style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold" displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
-            </ion-item>
-
-            <ion-grid>
-                <ion-row>
-                  <ion-col col-12>
-                    <ion-label style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold">Select Fridge or Rack</ion-label>
-                    <ion-select style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold">
-                      <ion-option>Fridge</ion-option>
-                      <ion-option>Rack</ion-option>
-                    </ion-select>
-                  </ion-col>
-                  
-                </ion-row>
-               
-              </ion-grid>
-              <button ion-button color="dark" style="font-size: 20px;color: rgb(44, 15, 15);font-weight: bold" full outline>Save</button>
+<ion-header  >
+  <ion-navbar   >
+    <h1  style="text-align: center;font-family: cursive; font-weight: bolder;font-size: 25px;color: rgb(82, 19, 19)">   Add Items</h1>
+  </ion-navbar>
+</ion-header>
+<ion-content padding style=" background:url('assets/imgs/7.jpg') no-repeat center center fixed;background-size: cover">
+  <ion-item style="background: transparent" ></ion-item>
+  <div style="font-size: 15px;font-weight: bolder; color: rgb(44, 15, 15);margin-left: 5%"> Item Name-: </div>
+  <ion-select style="font-size: 15px;font-weight: bolder; color: rgb(44, 15, 15)" [(ngModel)]="itemkitchen.name" >
+    <!--drop down list for food items-->
+    <ion-option>Apple</ion-option>
+    <ion-option>Banana</ion-option>
+    <ion-option>Beers</ion-option>
+    <ion-option>Beverages</ion-option> 
+    <ion-option>Bread</ion-option>
+    <ion-option>Butter</ion-option>
+    <ion-option>Cake</ion-option>
+    <ion-option>Cereals</ion-option>
+    <ion-option>Cheese</ion-option>
+    <ion-option>Coconut</ion-option>
+    <ion-option>Curry</ion-option>
+    <ion-option>Eggs</ion-option>
+    <ion-option>Fruit</ion-option>
+    <ion-option>Ice Cream</ion-option>
+    <ion-option>Lemon</ion-option>
+    <ion-option>Meat</ion-option>
+    <ion-option>Milk</ion-option>
+    <ion-option>Orange</ion-option>
+    <ion-option>Rice</ion-option>
+    <ion-option>Seasonings</ion-option>
+    <ion-option>Shorteats</ion-option>
+    <ion-option>Tomatoes</ion-option>
+    <ion-option>Vegetables</ion-option>
+    <ion-option>Watermelon</ion-option>
+    <ion-option>Yogurt</ion-option>
+    <ion-option>Food</ion-option>
+  </ion-select>
+  <ion-item style="background-color: transparent">
+    <ion-label floating style="font-weight: bolder;font-size: 15px;color:rgb(44, 15, 15);margin-top: 0%" >Amount</ion-label>
+    <ion-input type="text" style="font-size: 15px;color: rgb(44, 15, 15);font-weight: bolder" [(ngModel)]="itemkitchen.noOfItems"></ion-input>
+  </ion-item>
+  <ion-item style="background: transparent">
+    <ion-label floating style="font-weight: bolder;font-size: 15px;color:rgb(44, 15, 15)" >Expiration Date</ion-label>
+    <!--current date is the minimum date-->
+    <ion-datetime style="font-size: 15px;color: rgb(44, 15, 15);font-weight: bolder"min={{myActualDate}} max="2025" displayFormat="MM/DD/YYYY" [(ngModel)]="itemkitchen.exDate"></ion-datetime>
+    </ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-label style="font-size: 15px;color: rgb(44, 15, 15);font-weight: bolder;margin-left: 4%">Category</ion-label>
+          <ion-select style="font-size: 15px;color: rgb(44, 15, 15);font-weight: bolder" min="2018" [(ngModel)]="itemkitchen.fridgeOrRack">
+            <!--drop down list for category-->
+            <ion-option>Fridge</ion-option>
+            <ion-option>Freezer</ion-option>
+            <ion-option>Shelf</ion-option>
+          </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+<div ng-repeat="item in itemkitchen.exDate.split('-')">{{item}}</div>
+<!--save details-->
+<button ion-button color="dark" style="font-size: 15px;color: rgb(44, 15, 15);font-weight: bold" full outline (click)="additems(itemkitchen.name,itemkitchen.exDate,itemkitchen.noOfItems)" >Save</button>
 </ion-content>

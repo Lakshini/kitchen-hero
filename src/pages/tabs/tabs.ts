@@ -1,30 +1,20 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
 import {AdditemsPage} from '../additems/additems';
-import {ViewitemsPage} from '../viewitems/viewitems'
+import {ViewitemsPage} from '../viewitems/viewitems';
+import {RecipePage} from '../recipe/recipe';
 import {MainPage} from '../main/main';
-/**
- * Generated class for the TabsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-tabs',
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController) {
   }
-
+  //root pages
   tab1Root = MainPage;
   tab2Root = AdditemsPage;
   tab3Root = ViewitemsPage;
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TabsPage');
-  }
-
+  tab4Root= RecipePage;
 }

@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-//import {MainPage} from '../main/main';
 import {TabsPage} from '../tabs/tabs';
-
-
+import { DatabaseProvider } from './../../providers/database/database';
+import { IonicPage, NavController, NavParams,Platform } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController) {
-
-  }
-  launchTabsPage(){
-    this.navCtrl.push(TabsPage);
-  }
-
+  userlogin = {};
+  userloginlist = [];
+  constructor(public alertCtrl: AlertController,public navCtrl: NavController,private databaseprovider: DatabaseProvider,private platform: Platform) {
+}
 }

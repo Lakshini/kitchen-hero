@@ -1,28 +1,27 @@
 <ion-header>
   <ion-navbar>
     <ion-item style="background-color: rgb(146, 146, 146)">
-        <button ion-button style="margin-top: 10px; font-weight: bold;color: black;font-size: 15px" clear (click)="launchTabsPage()">Sign Up</button>
-        <button ion-button style="margin-left: 175px; margin-top: 10px; font-weight: bold;color: black;font-size: 15px" clear (click)="launchTabsPage()">Sign In</button>
-        
-       
-        
+        <button ion-button style="margin-top: 10px; font-weight: bold;color: black;font-size: 15px" clear (click)="register(userlogin.Username,userlogin.Password)">Sign Up</button>
+        <button ion-button style="margin-left: 120px; margin-top: 10px; font-weight: bold;color: black;font-size: 15px" clear (click)="launchTabsPage()">Sign In</button> 
     </ion-item>
-    
   </ion-navbar>
 </ion-header>
-
-<ion-content padding style=" background:url('../../assets/imgs/4.jpg') no-repeat center center fixed;background-size: cover">
+<!--home page-->
+<ion-content padding style=" background:url('assets/imgs/4.jpg') no-repeat center center fixed;background-size: cover">
   <h2 style="margin-bottom: 100px;margin-top: 20px;color: white;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Welcome to Kitchen Hero!!</h2>
- 
-  <ion-list>
-
-    <ion-item style="background-color: transparent">
-      <ion-label floating style="font-weight: bold;color: white" >Enter Pin Number</ion-label>
+<ion-list>
+  <ion-item style="background-color: transparent">
+      <ion-label floating style="font-weight: bold;color: white"  >Username</ion-label>
       
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" style="color: wheat" [(ngModel)]="userlogin.Username"></ion-input>
     </ion-item>
-
+    <ion-item style="background-color: transparent">
+      <ion-label floating style="font-weight: bold;color: white" >Password</ion-label>
+      
+      <ion-input type="password" style="color: wheat" [(ngModel)]="userlogin.Password"></ion-input>
+    </ion-item>
 
 
 </ion-list>
 </ion-content>
+

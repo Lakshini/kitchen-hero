@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController } from 'ionic-angular';
+import { TabsPage } from '../tabs/tabs';
 //import { HomePage } from '../home/home';
 
 /**
@@ -13,16 +14,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-main',
   templateUrl: 'main.html',
-  
 })
 export class MainPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-   
+  tabBarElement: any;
+  splash = true;
+  constructor(public navCtrl: NavController) {
+    this.tabBarElement = document.querySelector('.tabbar');
   }
-  
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
+    //set timer for animation
+    this.tabBarElement.style.display = 'none';
+    setTimeout(() => {
+      this.splash = false;
+      this.tabBarElement.style.display = 'flex';
+    }, 8000);
   }
   
 }
